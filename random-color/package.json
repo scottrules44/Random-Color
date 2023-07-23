@@ -1,0 +1,24 @@
+{
+  "name": "random-color",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://wcolor.scotth.tech",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && cp -r dist/* ../docs/",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.15",
+    "eslint": "^8.45.0",
+    "react-dom": "^18.2.0",
+    "typescript": "5.1.6"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "next": "^13.4.12",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.3.3"
+  }
+}
