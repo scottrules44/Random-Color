@@ -1,6 +1,12 @@
 name: Get Random Color
 
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+       description: 'Version Release'
+       required: false
+       default: '0'
   schedule:
     - cron: "0 0 * * 0"  # Cron expression for running every Sunday at 12:00 AM UTC
 
