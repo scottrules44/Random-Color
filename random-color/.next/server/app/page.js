@@ -254,11 +254,11 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_
 /***/ 2227:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7252))
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 4481))
 
 /***/ }),
 
-/***/ 7252:
+/***/ 4481:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -274,7 +274,7 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(6786);
 // EXTERNAL MODULE: external "next/dist/compiled/react"
 var react_ = __webpack_require__(8038);
-;// CONCATENATED MODULE: ./src/app/colorView.tsx
+;// CONCATENATED MODULE: ./src/app/ColorView.tsx
 
 
 function ColorView() {
@@ -298,9 +298,13 @@ function ColorView() {
                 },
                 className: "w-32 h-32 rounded-full mx-auto mb-4"
             }),
-            /*#__PURE__*/ jsx_runtime_.jsx("p", {
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
                 className: "text-gray-600",
-                children: color.name
+                children: [
+                    color.name,
+                    " - ",
+                    color.hex
+                ]
             })
         ]
     });

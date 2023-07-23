@@ -1,5 +1,5 @@
 'use client';
-import { ColorView } from "./colorView";
+import { ColorView } from "./ColorView";
 
 export default function Home() {
   
