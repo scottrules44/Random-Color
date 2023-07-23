@@ -1,18 +1,122 @@
 import random
 
-def generate_random_color():
-    # Generate random color name
-    adjectives = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet", "Pink", "Black", "White", "Gray", "Brown"]
-    nouns = ["Apple", "Banana", "Cherry", "Lemon", "Lime", "Orange", "Strawberry", "Grape", "Kiwi", "Peach", "Plum", "Watermelon"]
-    color_name = random.choice(adjectives) + " " + random.choice(nouns)
+def random_color():
+    colors = {
+        'Chartreuse': '#7FFF00',
+        'Dark Sea Green': '#8FBC8F',
+        'Brown': '#A52A2A',
+        'Royal Blue': '#4169E1',
+        'Light Coral': '#F08080',
+        'Old Lace': '#FDF5E6',
+        'Spring Green': '#00FF7F',
+        'Dim Gray': '#696969',
+        'Hot Pink': '#FF69B4',
+        'Gold': '#FFD700',
+        'Yellow Green': '#9ACD32',
+        'Light Green': '#90EE90',
+        'Magenta': '#FF00FF',
+        'Linen': '#FAF0E6',
+        'Light Sea Green': '#20B2AA',
+        'Crimson': '#DC143C',
+        'Blue': '#0000FF',
+        'Light Blue': '#ADD8E6',
+        'Orange Red': '#FF4500',
+        'Dark Goldenrod': '#B8860B',
+        'Dodger Blue': '#1E90FF',
+        'Sky Blue': '#87CEEB',
+        'Yellow': '#FFFF00',
+        'Dark Blue': '#00008B',
+        'Medium Spring Green': '#00FA9A',
+        'Pale Turquoise': '#AFEEEE',
+        'Dark Red': '#8B0000',
+        'Tomato': '#FF6347',
+        'Red': '#FF0000',
+        'Dark Cyan': '#008B8B',
+        'Wheat': '#F5DEB3',
+        'Light Slate Gray': '#778899',
+        'Lime Green': '#32CD32',
+        'Cyan': '#00FFFF',
+        'Purple': '#800080',
+        'Rosy Brown': '#BC8F8F',
+        'Thistle': '#D8BFD8',
+        'Dark Orange': '#FF8C00',
+        'Medium Slate Blue': '#7B68EE',
+        'Light Steel Blue': '#B0C4DE',
+        'Khaki': '#F0E68C',
+        'Dark Slate Blue': '#483D8B',
+        'Navajo White': '#FFDEAD',
+        'Medium Aquamarine': '#66CDAA',
+        'Indigo': '#4B0082',
+        'Steel Blue': '#4682B4',
+        'Light Yellow': '#FFFFE0',
+        'Peru': '#CD853F',
+        'Silver': '#C0C0C0',
+        'Dark Khaki': '#BDB76B',
+        'Orange': '#FFA500',
+        'Violet': '#EE82EE',
+        'Sienna': '#A0522D',
+        'Turquoise': '#40E0D0',
+        'Midnight Blue': '#191970',
+        'Cadet Blue': '#5F9EA0',
+        'White Smoke': '#F5F5F5',
+        'Olive': '#808000',
+        'Light Pink': '#FFB6C1',
+        'Pink': '#FFC0CB',
+        'Powder Blue': '#B0E0E6',
+        'Dark Magenta': '#8B008B',
+        'Light Gray': '#D3D3D3',
+        'Saddle Brown': '#8B4513',
+        'Seashell': '#FFF5EE',
+        'Pale Green': '#98FB98',
+        'Sandy Brown': '#F4A460',
+        'Coral': '#FF7F50',
+        'Maroon': '#800000',
+        'Sea Green': '#2E8B57',
+        'Dark Orchid': '#9932CC',
+        'Peach Puff': '#FFDAB9',
+        'Deep Sky Blue': '#00BFFF',
+        'Light Sky Blue': '#87CEFA',
+        'Medium Sea Green': '#3CB371',
+        'Light Goldenrod Yellow': '#FAFAD2',
+        'Medium Blue': '#0000CD',
+        'Light Salmon': '#FFA07A',
+        'Pale Goldenrod': '#EEE8AA',
+        'Aquamarine': '#7FFFD4',
+        'Lavender': '#E6E6FA',
+        'Navy': '#000080',
+        'Medium Purple': '#9370DB',
+        'Lavender Blush': '#FFF0F5',
+        'Orchid': '#DA70D6',
+        'Deep Pink': '#FF1493',
+        'Indian Red': '#CD5C5C',
+        'Teal': '#008080',
+        'Papaya Whip': '#FFEFD5',
+        'Medium Turquoise': '#48D1CC',
+        'Green': '#00FF00',
+        'Salmon': '#FA8072',
+        'Chocolate': '#D2691E',
+        'Medium Violet Red': '#C71585',
+        'Lime': '#00FF00',
+        'Light Cyan': '#E0FFFF',
+        'Tan': '#D2B48C',
+        'Azure': '#F0FFFF',
+        'Forest Green': '#228B22',
+        'Moccasin': '#FFE4B5',
+        'Medium Orchid': '#BA55D3',
+        'Slate Blue': '#6A5ACD',
+        'Dark Olive Green': '#556B2F',
+        'Dark Slate Gray': '#2F4F4F',
+        'Firebrick': '#B22222',
+        'Slate Gray': '#708090'
+    }
+    # Get a random color name and its HTML hex code
+    color_name, hex_code = random.choice(list(colors.items()))
 
-    # Generate random hex value
-    hex_value = '#' + ''.join(random.choice('0123456789ABCDEF') for _ in range(6))
-
-    return color_name, hex_value
+    return color_name, hex_code
 
 # Generate and print a random color
-random_color_name, random_hex_value = generate_random_color()
+
+random_color_name, random_hex_value = random_color()
 
 with open("docs/color.json", "w") as file:
     file.write("{\"name\":\""+random_color_name+"\", \"hex\":\""+random_hex_value+"\"}")

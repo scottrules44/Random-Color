@@ -186,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
         '',
         {
         children: ['__PAGE__', {}, {
-          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 9551)), "/Users/scottharrison/My Drive/Desktop/cached projects/Random-Color/random-color/src/app/page.tsx"],
+          page: [() => Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 8159)), "/Users/scottharrison/My Drive/Desktop/cached projects/Random-Color/random-color/src/app/page.tsx"],
           metadata: {
     icon: [(async (props) => (await Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 3881))).default(props))],
     apple: [],
@@ -251,9 +251,70 @@ Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_
 
 /***/ }),
 
-/***/ 5303:
-/***/ (() => {
+/***/ 2227:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
+Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7252))
+
+/***/ }),
+
+/***/ 7252:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ Home)
+});
+
+// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(6786);
+// EXTERNAL MODULE: external "next/dist/compiled/react"
+var react_ = __webpack_require__(8038);
+;// CONCATENATED MODULE: ./src/app/colorView.tsx
+
+
+function ColorView() {
+    const [color, setColor] = (0,react_.useState)({
+        name: "Loading...",
+        hex: "#000000"
+    });
+    (0,react_.useEffect)(()=>{
+        fetch("/color.json").then((res)=>res.json()).then((data)=>setColor(data));
+    }, []);
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: "text-center  h-full w-full",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                className: "text-2xl font-bold mb-4",
+                children: "Color of the Week"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                style: {
+                    backgroundColor: color.hex
+                },
+                className: "w-32 h-32 rounded-full mx-auto mb-4"
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                className: "text-gray-600",
+                children: color.name
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: ./src/app/page.tsx
+/* __next_internal_client_entry_do_not_use__ default auto */ 
+
+function Home() {
+    return /*#__PURE__*/ jsx_runtime_.jsx("main", {
+        className: "container mx-auto p-4 flex h-screen w-full",
+        children: /*#__PURE__*/ jsx_runtime_.jsx(ColorView, {})
+    });
+}
 
 
 /***/ }),
@@ -289,50 +350,29 @@ function RootLayout({ children }) {
 
 /***/ }),
 
-/***/ 9551:
+/***/ 8159:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   $$typeof: () => (/* binding */ $$typeof),
+/* harmony export */   __esModule: () => (/* binding */ __esModule),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1363);
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ Home)
-});
+const proxy = (0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`/Users/scottharrison/My Drive/Desktop/cached projects/Random-Color/random-color/src/app/page.tsx`)
 
-// EXTERNAL MODULE: external "next/dist/compiled/react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(6786);
-;// CONCATENATED MODULE: ./src/app/color.json
-const color_namespaceObject = JSON.parse('{"u":"Yellow Apple","$":"#5C1DAE"}');
-;// CONCATENATED MODULE: ./src/app/page.tsx
+// Accessing the __esModule property and exporting $$typeof are required here.
+// The __esModule getter forces the proxy target to create the default export
+// and the $$typeof value is for rendering logic to determine if the module
+// is a client boundary.
+const { __esModule, $$typeof } = proxy;
+const __default__ = proxy.default;
 
 
-function Home() {
-    return /*#__PURE__*/ jsx_runtime_.jsx("main", {
-        className: "container mx-auto p-4 flex h-screen w-full",
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-            className: "text-center  h-full w-full",
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx("h2", {
-                    className: "text-2xl font-bold mb-4",
-                    children: "Color of the Week"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                    style: {
-                        backgroundColor: color_namespaceObject.$
-                    },
-                    className: "w-32 h-32 rounded-full mx-auto mb-4"
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("p", {
-                    className: "text-gray-600",
-                    children: color_namespaceObject.u
-                })
-            ]
-        })
-    });
-}
-
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__default__);
 
 /***/ }),
 
