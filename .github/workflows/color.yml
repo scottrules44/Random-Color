@@ -8,7 +8,7 @@ env:
   WORKSPACE: ${{ github.workspace }}
 
 jobs:
-  collect-ads:
+  get-random-color:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,6 +28,6 @@ jobs:
         uses: EndBug/add-and-commit@v4
         with:
           message: "Get Random Color"
-          add: "site/color.json"
+          add: "docs/color.json"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
