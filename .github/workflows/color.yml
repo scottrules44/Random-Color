@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Python Script
         run: |
-          python random_color.py
+          python get_random_color.py
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v4

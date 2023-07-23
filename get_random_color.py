@@ -14,5 +14,5 @@ def generate_random_color():
 # Generate and print a random color
 random_color_name, random_hex_value = generate_random_color()
 
-with open("site/color.json", "w") as file:
+with open("docs/color.json", "w") as file:
     file.write("{\"name\":\""+random_color_name+"\", \"hex\":\""+random_hex_value+"\"}")
